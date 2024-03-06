@@ -7,6 +7,8 @@ import Image from 'react-bootstrap/Image';
 import Logo1 from '../../assets/trend.png'
 import Logo2 from '../../assets/email.png'
 import Logo3 from '../../assets/salary.png'
+import Anal1 from '../../assets/analyst.png'
+import Anal from '../../assets/anal1.png'
 
 
 // Import Swiper styles
@@ -77,8 +79,9 @@ export default function Sentiments() {
                     </Swiper >
 
 
-                    <Card.Subtitle className="py-2 fs-5 fw-bold text-muted">Analyst Estimates</Card.Subtitle>
-
+                    <Card.Subtitle className="py-3 mt-2 fs-5 fw-bold text-muted">Analyst Estimates</Card.Subtitle>
+                    <Image className="sentiImage d-none d-md-block" src={Anal1} fluid />
+                    <Image className="sentiImage d-block d-md-none" src={Anal} fluid />
 
                 </Card.Body>
             </Card >
