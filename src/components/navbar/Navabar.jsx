@@ -2,7 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import MyLogo from '../../assets/logo.png'
-
+import Button from '../../assets/button.png'
+import Image from 'react-bootstrap/Image';
 
 function Navabar() {
   return (
@@ -23,6 +24,7 @@ function Navabar() {
             <Nav.Link className="text-dark fw-bold" href="#link">Crypto Taxes</Nav.Link>
             <Nav.Link className="text-dark fw-bold" href="#link">Free Tools</Nav.Link>
             <Nav.Link className="text-dark fw-bold" href="#link">Resource Center</Nav.Link>
+            <Image className="mx-2" href="#link" src={Button} height="45" width="30%" />
           </Nav>
         </Navbar.Collapse>
       </Container>

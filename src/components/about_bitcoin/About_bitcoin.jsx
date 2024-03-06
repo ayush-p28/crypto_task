@@ -5,7 +5,7 @@ import MyImage2 from '../../assets/img2.png'
 
 function About_bitcoin() {
   return (
-    <Card style={{ width: 'auto' }}>
+    <Card className="mt-3">
       <Card.Body>
         <Card.Title className="fw-bold">About Bitcoin</Card.Title>
         <Card.Subtitle className="mt-4 fw-bold">What is Bitcoin?</Card.Subtitle>
