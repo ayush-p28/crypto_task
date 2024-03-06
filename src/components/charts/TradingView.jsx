@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState, memo } from 'react';
+import PropTypes from 'prop-types';
 
-function TradingView() {
+function TradingView(props) {
+  const coinData = props.coinData;
+  console.log(coinData+"===")
+
   const container = useRef();
   const [chartInstance, setChartInstance] = useState(null);
 
@@ -13,7 +17,7 @@ function TradingView() {
       {
         "symbols": [
           [
-            "CME:BTC1!|1M"
+            "${coinData}|1M"
           ]
         ],
         "chartOnly": true,
@@ -57,9 +61,11 @@ function TradingView() {
 
     // Clean up function to remove the script when the component unmounts
     return () => {
-      container.current.removeChild(script);
+      if (container.current.contains(script)) {
+        container.current.removeChild(script);
+      }
     };
-  }, []);
+  }, [coinData]);
 
   // Function to update the chart with new data
   const updateChartWithData = () => {
@@ -88,7 +94,8 @@ function TradingView() {
   );
 }
 
+TradingView.propTypes = {
+  coinData: PropTypes.string.isRequired // Specify the prop type and make it required
+};
+
 export default memo(TradingView);
-
-// export default memo(TradingView);
-

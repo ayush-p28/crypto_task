@@ -17,7 +17,7 @@ function AlsoLike() {
         const fetchData = async () => {
             try {
                 const data = await fetchTrending();
-                setTrendingData(data.coins.slice(0, 6).map(coin => coin.item));
+                setTrendingData(data.coins.slice(0, 10).map(coin => coin.item));
             } catch (error) {
                 console.log(error);
             }

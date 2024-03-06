@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Navabar from './components/navbar/Navabar.jsx'
-// import Charts_price from './components/charts/Chart_price.jsx'
+import Charts_price from './components/charts/Chart_price.jsx'
 // import Charts from './components/charts/Charts.jsx'
 import Tabs from './components/tabs/Tabs.jsx'
 import Performance from './components/performance/Performance.jsx'
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ReactDOM.createRoot(document.getElementById('left')).render(
   <React.StrictMode>
-    {/* <Charts_price/> */}
+    <Charts_price/>
     {/* <Charts/> */}
     <Tabs/>
     <Performance />
