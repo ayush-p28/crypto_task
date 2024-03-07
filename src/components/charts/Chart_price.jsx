@@ -46,8 +46,8 @@ function Charts() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('ethereum', 'eth')}>Ethereum (ETH)</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2" onClick={() => checkCoin('tether','usdt')}>Tether (USDT)</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('ethereum', 'ETH')}>Ethereum (ETH)</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2" onClick={() => checkCoin('tether','USDT')}>Tether (USDT)</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3" onClick={() => checkCoin('binancecoin','BNB')}>binancecoin (BNB)</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>

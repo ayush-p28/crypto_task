@@ -10,9 +10,9 @@ import Sentiments from './components/sentiments/Sentiments.jsx'
 import About_bitcoin from './components/about_bitcoin/About_bitcoin.jsx'
 import Tokenomics from './components/tokenomics/Tokenomics.jsx'
 import Team from './components/team/Team.jsx'
-// import AlsoLike from './components/also_like/AlsoLike.jsx'
+import AlsoLike from './components/also_like/AlsoLike.jsx'
 import Side_banner from './components/sidebanner/Side_banner.jsx'
-// import TrdendingCoins from './components/trending_coins/TrendingCoins.jsx'
+import TrdendingCoins from './components/trending_coins/TrendingCoins.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('header')).render(
@@ -43,11 +43,11 @@ ReactDOM.createRoot(document.getElementById('left')).render(
 ReactDOM.createRoot(document.getElementById('right')).render(
   <React.StrictMode>
     <Side_banner />
-    {/* <TrdendingCoins /> */}
+    <TrdendingCoins />
   </React.StrictMode>,
 )
 ReactDOM.createRoot(document.getElementById('footer')).render(
   <React.StrictMode>
-    {/* <AlsoLike /> */}
+    <AlsoLike />
   </React.StrictMode>,
 )

@@ -1,5 +1,6 @@
 // import React from 'react';
-import TradingViewWidget from './TradingView';
+// import TradingViewWidget from './TradingView';
+import TradingChart from './TradingChart';
 import PropTypes from 'prop-types';
 
 function Charts(props) {
@@ -7,7 +8,8 @@ function Charts(props) {
   console.log(coinSymbol);
   return (
     <div className="App">
-      <TradingViewWidget coinData={coinSymbol}/>
+      {/* <TradingViewWidget coinData={coinSymbol}/> */}
+      <TradingChart coinData={coinSymbol}/>
     </div>
   );
 }
