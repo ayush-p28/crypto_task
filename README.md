@@ -1,7 +1,5 @@
 # React + Vite
 
-## Task/Features
-
 ### TechStack Used
 - React JS
 - Vite JS
@@ -12,6 +10,9 @@
 - Deployed On
   https://65e95b80064fd2ab7d9dd08d--starlit-platypus-4b8122.netlify.app/
 
+
+
+## Task/Features
 ### Mandatory
 - cryptocurrency single page web application
 - fetch and convert coins price data
