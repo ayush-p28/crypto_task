@@ -6,7 +6,7 @@ function UnderlineExample() {
       <Nav id="scrollmenu" className="my-3 border-bottom" variant="underline" defaultActiveKey="/overview">
         
         <Nav.Item>
-          <Nav.Link href="/overview">Overview</Nav.Link>
+          <Nav.Link href="#">Overview</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="text-secondary fw-bold" eventKey="link-1">Fundamentals</Nav.Link>

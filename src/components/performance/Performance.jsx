@@ -35,8 +35,8 @@ function Performance() {
       </div>
       <Card.Body>
         <Card.Subtitle className="text-muted fw-bold py-4">Fundamentals</Card.Subtitle>
-        <div className="row px-3">
-          <div className="col-md-5 mx-4">
+        <div className="row px-3 mx-auto">
+          <div className="col-md-6 ">
             <span className="text-secondary fw-bold">Bitcoin Price</span>
             <span className="float-end">${data && data.market_data.current_price.usd}</span>
             <hr />
@@ -54,7 +54,7 @@ function Performance() {
             <hr />
 
           </div>
-          <div className="col-md-5 mx-4">
+          <div className="col-md-6">
             <span className="text-secondary fw-bold">Market Cap</span>
             <span className="float-end">$323,507,290,057</span>
             <hr />

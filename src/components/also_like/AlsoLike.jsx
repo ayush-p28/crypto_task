@@ -52,11 +52,10 @@ function AlsoLike() {
                                         <Card.Body>
                                             <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
 
-                                                {data && <span className={`d-inline-block float-end p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
+                                                {data && <span className={`d-inline-block float-end symbolName p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
                                                     <Image
                                                         src={data.data.price_change_percentage_24h.usd >= 0 ? UpArrow : DownArrow}
-                                                        width="15"
-                                                        height="15"
+                                                        className="alsoChartsImages"
                                                         style={{ marginRight: '5px' }}
                                                     />
 
@@ -93,7 +92,7 @@ function AlsoLike() {
                                     <Card>
                                         <Card.Body>
                                             <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
-                                                {data && <span className={`d-inline-block float-end p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
+                                                {data && <span className={`d-inline-block symbolName float-end p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
                                                     <Image
                                                         src={data.data.price_change_percentage_24h.usd >= 0 ? UpArrow : DownArrow}
                                                         width="15"
