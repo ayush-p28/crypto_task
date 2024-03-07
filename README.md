@@ -26,7 +26,8 @@
 
 
 ### Live Demo
-- Deployed On 
+- Deployed On
+  https://65e95b80064fd2ab7d9dd08d--starlit-platypus-4b8122.netlify.app/
 
 
 Thanks for visiting 😍😍
