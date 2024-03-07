@@ -42,11 +42,15 @@ function Charts() {
                     <div className="col">
                         <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                ByDefault(bitcoin)
+                                Select Coin
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('bitcoin', 'BTC')}>Bitcoin (BTC)</Dropdown.Item>
                                 <Dropdown.Item href="#/action-1" onClick={() => checkCoin('ethereum', 'ETH')}>Ethereum (ETH)</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('stellar', 'XLM')}>Stellar (XLM)</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('litecoin', 'LTC')}>Litecoin (LTC)</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1" onClick={() => checkCoin('ripple', 'XRP')}>Ripple (XRP)</Dropdown.Item>
                                 <Dropdown.Item href="#/action-2" onClick={() => checkCoin('tether','USDT')}>Tether (USDT)</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3" onClick={() => checkCoin('binancecoin','BNB')}>binancecoin (BNB)</Dropdown.Item>
                             </Dropdown.Menu>

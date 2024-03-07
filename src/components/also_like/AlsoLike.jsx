@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
+import UpArrow from '../../assets/arrow.png'
+import DownArrow from '../../assets/down.png'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,7 +19,7 @@ function AlsoLike() {
         const fetchData = async () => {
             try {
                 const data = await fetchTrending();
-                setTrendingData(data.coins.slice(0, 10).map(coin => coin.item));
+                setTrendingData(data.coins.slice(0, 12).map(coin => coin.item));
             } catch (error) {
                 console.log(error);
             }
@@ -44,19 +46,31 @@ function AlsoLike() {
                     >
 
                         {trendingData.map((data) => (
-                            <SwiperSlide key={data.id} className="alsoSlide">
-                                <Card>
-                                    <Card.Body>
-                                        <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
-                                            {data && <span className="d-inline-block float-end bg-hara text-success p-1">
-                                                {data.data.price_change_percentage_24h.usd.toFixed(2)}
-                                            </span>}
-                                        </Card.Subtitle>
-                                        <Card.Title className="fw-bold">{data.data.price}</Card.Title>
-                                        {data.thumb && <Image className="alsoCharts" src={data.data.sparkline} />}
-                                    </Card.Body>
-                                </Card>
-                            </SwiperSlide>
+                            data.symbol !== "COQ" && (
+                                <SwiperSlide key={data.id} className="alsoSlide">
+                                    <Card>
+                                        <Card.Body>
+                                            <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
+
+                                                {data && <span className={`d-inline-block float-end p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
+                                                    <Image
+                                                        src={data.data.price_change_percentage_24h.usd >= 0 ? UpArrow : DownArrow}
+                                                        width="15"
+                                                        height="15"
+                                                        style={{ marginRight: '5px' }}
+                                                    />
+
+                                                    {data && data.data.price_change_percentage_24h.usd.toFixed(2)}%</span>}
+
+
+                                                {/* </span>} */}
+                                            </Card.Subtitle>
+                                            <Card.Title className="fw-bold">{data.data.price}</Card.Title>
+                                            {data.thumb && <Image className="alsoCharts" src={data.data.sparkline} />}
+                                        </Card.Body>
+                                    </Card>
+                                </SwiperSlide>
+                            )
                         ))}
 
                     </Swiper >
@@ -74,19 +88,29 @@ function AlsoLike() {
 
 
                         {trendingData.map((data) => (
-                            <SwiperSlide key={data.id} className="alsoSlide">
-                                <Card>
-                                    <Card.Body>
-                                        <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
-                                            {data && <span className="d-inline-block bg-hara float-end text-success p-1">
-                                                {data.data.price_change_percentage_24h.usd.toFixed(2)}
-                                            </span>}
-                                        </Card.Subtitle>
-                                        <Card.Title className="fw-bold">{data.data.price}</Card.Title>
-                                        {data.thumb && <Image className="alsoCharts" src={data.data.sparkline} />}
-                                    </Card.Body>
-                                </Card>
-                            </SwiperSlide>
+                            data.symbol !== "COQ" && (
+                                <SwiperSlide key={data.id} className="alsoSlide">
+                                    <Card>
+                                        <Card.Body>
+                                            <Card.Subtitle className="mb-2">{data.thumb && <Image className="alsoLogoImages" src={data.thumb} />}{<span className="symbolName">{data.symbol}</span>}
+                                                {data && <span className={`d-inline-block float-end p-1 ${data.data.price_change_percentage_24h.usd >= 0 ? 'bg-hara text-success' : 'bg-laal text-danger'}`}>
+                                                    <Image
+                                                        src={data.data.price_change_percentage_24h.usd >= 0 ? UpArrow : DownArrow}
+                                                        width="15"
+                                                        height="15"
+                                                        style={{ marginRight: '5px' }}
+                                                    />
+
+                                                    {data && data.data.price_change_percentage_24h.usd.toFixed(2)}%</span>}
+
+
+                                            </Card.Subtitle>
+                                            <Card.Title className="fw-bold">{data.data.price}</Card.Title>
+                                            {data.thumb && <Image className="alsoCharts" src={data.data.sparkline} />}
+                                        </Card.Body>
+                                    </Card>
+                                </SwiperSlide>
+                            )
                         ))}
                     </Swiper>
                 </Card.Body>
