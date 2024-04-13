@@ -1,7 +1,18 @@
 # React + Vite
 
-## Task/Features
+### TechStack Used
+- React JS
+- Vite JS
+- Swipper JS
+- Bootstrap 5
 
+### Live Demo
+- Deployed On
+  https://65e95b80064fd2ab7d9dd08d--starlit-platypus-4b8122.netlify.app/
+
+
+
+## Task/Features
 ### Mandatory
 - cryptocurrency single page web application
 - fetch and convert coins price data
@@ -17,16 +28,6 @@
 - dynamic behaviour to show coin data
 - clean code
 - proper versioning control
-
-### TechStack Used
-- React JS
-- Vite JS
-- Swipper JS
-- Bootstrap 5
-
-
-### Live Demo
-- Deployed On 
 
 
 Thanks for visiting 😍😍
